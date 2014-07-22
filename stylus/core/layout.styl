@@ -37,9 +37,9 @@ header
     height 100%
 
 .sidebar
-    background color-black
+    background color-sidebar
     width sidebar-width
-    color color-white
+    color color-sidebar-type
     height 100%
     display block
     padding 0
@@ -49,8 +49,10 @@ header
     z-index 99
 
     h2
-        margin 10px 30px
-        color color-grey
+        padding 10px 30px
+        color color-sidebar-logo-type
+        background color-sidebar-logo-bg
+        margin-bottom 0
 
     ul
         debullet()
@@ -58,21 +60,21 @@ header
         li
             display block
             padding 10px 30px
-            color color-white
+            color color-sidebar-type
             cursor default
 
             &:hover
-                color color-green
-                background rgba(#fff, .05)
+                color color-sidebar-hover-type
+                background color-sidebar-hover-bg
 
             &.active
-                background #000
+                background rgba(#000, .2)
 
 tab-color(color)
     background color
 
     &:hover:not(.active)
-        background lighten(color, 10%)
+        background lighten(color, 10)
 
 .nav-tabs
     position fixed
@@ -91,13 +93,13 @@ tab-color(color)
         font-weight bold
 
         &.tab-problem
-            tab-color(color-green)
+            tab-color(color-tab-problem)
 
         &.tab-script
-            tab-color(color-blue)
+            tab-color(color-tab-script)
 
         &.tab-solution
-            tab-color(color-red)
+            tab-color(color-tab-solution)
 
         &.active
             background bg-color
